@@ -3,12 +3,6 @@
   background-color: var(--color-white);
 }
 
-.about__subtitle {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--color-light-black);
-}
-
 .about__content {
   display: flex;
   justify-content: space-between;
@@ -21,6 +15,16 @@
   font-weight: 700;
   max-width: 500px;
   position: relative;
+}
+
+.about__title::before {
+  content: "How it works";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--co-light-black);
 }
 
 .about__desc {
@@ -43,37 +47,34 @@
 }
 
 @media (max-width: 1250px) {
-  .about__subtitle {
-    max-width: 600px;
-    text-align: center;
+  .about__content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
   }
- .about__content {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
- }
+
   .about__cards {
     flex-direction: column;
     align-items: center;
     justify-self: start;
   }
-  
-   .about__cards .card:nth-child(2) {
+
+  .about__cards .card:nth-child(2) {
     margin: 0;
-   }
+  }
+}
+
+@media (max-width: 576px) {
+  .about__content {
+    padding: 0 15px;
   }
 
-    @media (max-width: 576px) {
-      .about__content {
-        padding: 0 15px;
-      }
+  .about__title {
+    font-size: 35px;
+  }
 
-      .about__title {
-        font-size: 35px;
-      }
-
-      .about__desc {
-        font-size: 16px;
-      }
-    }
+  .about__desc {
+    font-size: 16px;
+  }
+}

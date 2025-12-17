@@ -35,13 +35,13 @@
 }
 
 .success__content .btn {
-  margin-top: 50px 0 0 0;
+  margin: 50px 0 0 0;
   width: 240px;
   height: 65px;
 }
 
 .success__content .btn:hover {
-  border: 2px solid var(--color-white);
+  outline: 2px solid var(--color-white);
 }
 .success__content-video {
   max-width: 790px;
